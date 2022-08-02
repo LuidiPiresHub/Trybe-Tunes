@@ -58,3 +58,35 @@ code {
  font-size: 16px;
  line-height: 150%;
 }
+
+.headerConteiner {
+  display: flex;
+  justify-content: space-between;
+  background-color: #023031;
+  color: white;
+  padding: 25px;
+}
+
+.headerLogo {
+  height: 50px;
+  width: auto;
+}
+
+.linksConteiner {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: rgb(205, 217, 235);
+}
+
+.links {
+  color: #2FC18C;
+  text-decoration: none;
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 29px;
+
+}

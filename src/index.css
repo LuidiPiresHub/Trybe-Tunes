@@ -17,3 +17,44 @@ code {
   display: flex;
   justify-content: center;
 }
+
+.mainLoginDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.IMG {
+  margin-top: 100px;
+  margin-left: 120px;
+}
+
+.formDiv {
+ width: 600px;
+ text-align: center;
+ border-radius: 10px;
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ color: white;
+ padding: 50px;
+}
+
+.inputLogin {
+ border-radius: 5px;
+ height: 40px;
+ width: 482px;
+ margin: 20px;
+ padding-left: 10px;
+}
+
+.loginButton {
+ background-color: blue;
+ border-radius: 5px;
+ color: white;
+ height: 40px;
+ width: 500px;
+ font-family: 'Verdana';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 16px;
+ line-height: 150%;
+}

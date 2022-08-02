@@ -37,37 +37,37 @@ class Header extends React.Component {
           {loading ? (
             <LoadingScreen />
           ) : (
-            <div className="headerConteiner">
-              <img className="headerLogo" src="https://www.abcdacomunicacao.com.br/wp-content/uploads/Trybe_logo-baixa.png" alt="Trybe Tunes Logo" />
-              <p data-testid="header-user-name">
-                {name.name}
-              </p>
+            <div>
+              <div className="headerConteiner">
+                <img className="headerLogo" src="https://www.abcdacomunicacao.com.br/wp-content/uploads/Trybe_logo-baixa.png" alt="Trybe Tunes Logo" />
+                <p className="headerName" data-testid="header-user-name">{name.name}</p>
+              </div>
+              <nav className="linksConteiner">
+                <Link
+                  className="links"
+                  to="/search"
+                  data-testid="link-to-search"
+                >
+                  Pesquisa
+                </Link>
+                <Link
+                  className="links"
+                  to="/favorites"
+                  data-testid="link-to-favorites"
+                >
+                  Favoritas
+                </Link>
+                <Link
+                  className="links"
+                  to="/profile"
+                  data-testid="link-to-profile"
+                >
+                  Perfil
+                </Link>
+              </nav>
             </div>
           )}
         </header>
-        <nav className="linksConteiner">
-          <Link
-            className="links"
-            to="/search"
-            data-testid="link-to-search"
-          >
-            Pesquisa
-          </Link>
-          <Link
-            className="links"
-            to="/favorites"
-            data-testid="link-to-favorites"
-          >
-            Favoritas
-          </Link>
-          <Link
-            className="links"
-            to="/profile"
-            data-testid="link-to-profile"
-          >
-            Perfil
-          </Link>
-        </nav>
       </div>
     );
   }

@@ -62,7 +62,8 @@ code {
 .headerConteiner {
   display: flex;
   justify-content: space-between;
-  background-color: #023031;
+  /* background-color: #023031; */
+  background-color: #036B52;;
   color: white;
   padding: 25px;
 }
@@ -87,9 +88,8 @@ code {
 .linksConteiner {
   display: flex;
   justify-content: space-around;
-  border: 2px solid black;
   padding: 10px;
-  background-color: rgb(205, 217, 235);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .links {
@@ -114,6 +114,11 @@ code {
   border-radius: 6px;
   margin-right: 30px;
   padding-left: 15px;
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
 }
 
 .searchButton {
@@ -127,4 +132,55 @@ code {
   line-height: 150%;
   height: 45px;
   width: 134px;
+}
+
+.albumTitle {
+  margin-top: 100px;
+  margin-left: 280px;
+}
+
+.albumConteiner {
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 0 0 0 255px;
+}
+
+.searchImgConteiner {
+  height: auto;
+  width: 290px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.subAlbumConteiner {
+  display: flex;
+  align-items: flex-start;
+  flex-flow: column wrap;
+  padding-left: 30px;
+  width: 280px;
+  height: 150px;
+}
+
+.albumName {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #3D495C;
+}
+
+.albumArtist {
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #3D495C;
 }

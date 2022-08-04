@@ -11,8 +11,6 @@ class Header extends React.Component {
       loading: false,
       name: {},
     };
-
-    this.userProfile = this.userProfile.bind(this);
   }
 
   componentDidMount() {

@@ -31,30 +31,23 @@ class Search extends React.Component {
   searchButton = async (event) => {
     event.preventDefault();
     const { name } = this.state;
-    this.setState({ loading: true }, async () => {
+    this.setState({ loading: true, name: '' }, async () => {
       const musics = await searchAlbumsAPI(name);
       if (musics.length !== 0) {
-        const artistName = musics[0].artistName.split('.').join(':');
         this.setState({
           loading: false,
           albuns: musics,
-          render: true,
-          artist: artistName,
+          render: 'enable',
+          artist: name,
         });
       } else {
-        (<div>teste</div>);
+        this.setState({ loading: false, render: 'fail' });
       }
     });
   }
 
   renderMusicList = () => {
     const { albuns } = this.state;
-    if (albuns.length === 0) {
-      return (
-        <p>Nenhum álbum foi encontrado</p>
-      );
-    }
-
     return albuns.map((album) => (
       <div key={ album.collectionId }>
         <div>
@@ -108,11 +101,16 @@ class Search extends React.Component {
           </div>
         )}
 
-        { render && (
-          <h2 className="albumTitle">{`Resultado de álbuns do Artista ${artist}`}</h2>
+        { render === 'enable' && (
+          <h2 className="albumTitle">{`Resultado de álbuns de: ${artist}`}</h2>
         )}
+
         <div className="albumConteiner">
-          { render && (this.renderMusicList()) }
+          { render === 'fail' && (<p>Nenhum álbum foi encontrado</p>)}
+        </div>
+
+        <div className="albumConteiner">
+          { render === 'enable' && (this.renderMusicList()) }
         </div>
       </div>
     );

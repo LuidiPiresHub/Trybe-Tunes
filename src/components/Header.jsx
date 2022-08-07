@@ -32,39 +32,37 @@ class Header extends React.Component {
     return (
       <div>
         <header data-testid="header-component">
-          {loading ? (
-            <LoadingScreen />
-          ) : (
-            <div>
-              <div className="headerConteiner">
-                <img className="headerLogo" src="https://www.abcdacomunicacao.com.br/wp-content/uploads/Trybe_logo-baixa.png" alt="Trybe Tunes Logo" />
+          <div>
+            <div className="headerConteiner">
+              <img className="headerLogo" src="https://www.abcdacomunicacao.com.br/wp-content/uploads/Trybe_logo-baixa.png" alt="Trybe Tunes Logo" />
+              { loading ? <LoadingScreen /> : (
                 <p className="headerName" data-testid="header-user-name">{name.name}</p>
-              </div>
-              <nav className="linksConteiner">
-                <Link
-                  className="links"
-                  to="/search"
-                  data-testid="link-to-search"
-                >
-                  Pesquisa
-                </Link>
-                <Link
-                  className="links"
-                  to="/favorites"
-                  data-testid="link-to-favorites"
-                >
-                  Favoritas
-                </Link>
-                <Link
-                  className="links"
-                  to="/profile"
-                  data-testid="link-to-profile"
-                >
-                  Perfil
-                </Link>
-              </nav>
+              )}
             </div>
-          )}
+            <nav className="linksConteiner">
+              <Link
+                className="links"
+                to="/search"
+                data-testid="link-to-search"
+              >
+                Pesquisa
+              </Link>
+              <Link
+                className="links"
+                to="/favorites"
+                data-testid="link-to-favorites"
+              >
+                Favoritas
+              </Link>
+              <Link
+                className="links"
+                to="/profile"
+                data-testid="link-to-profile"
+              >
+                Perfil
+              </Link>
+            </nav>
+          </div>
         </header>
       </div>
     );

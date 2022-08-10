@@ -116,7 +116,7 @@ code {
 .formConteiner {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .searchInput {
@@ -144,8 +144,16 @@ code {
   width: 134px;
 }
 
+.albumNotFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+  font-size: large;
+}
+
 .albumTitle {
-  margin-top: 100px;
+  margin-top: -50px;
   margin-left: 280px;
 }
 
@@ -194,4 +202,31 @@ code {
   font-size: 12px;
   line-height: 150%;
   color: #3D495C;
+}
+
+.albumPageConteiner {
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: center;
+}
+
+.albumInfos {
+  /* border: 2px solid red; */
+}
+
+.musicsConteiner {
+  /* border: 2px solid blue; */
+}
+
+.musicList {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 600px;
+  margin: 20px auto;
+}
+
+.musicListName {
+  /* border: 2px solid blue; */
 }

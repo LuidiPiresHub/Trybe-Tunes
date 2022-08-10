@@ -101,13 +101,13 @@ class Search extends React.Component {
           </div>
         )}
 
+        <div className="albumNotFound">
+          { render === 'fail' && (<h1>Nenhum álbum foi encontrado</h1>)}
+        </div>
+
         { render === 'enable' && (
           <h2 className="albumTitle">{`Resultado de álbuns de: ${artist}`}</h2>
         )}
-
-        <div className="albumConteiner">
-          { render === 'fail' && (<p>Nenhum álbum foi encontrado</p>)}
-        </div>
 
         <div className="albumConteiner">
           { render === 'enable' && (this.renderMusicList()) }

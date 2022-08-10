@@ -230,3 +230,7 @@ code {
 .musicListName {
   /* border: 2px solid blue; */
 }
+
+.checkbox {
+  /* display: flex; */
+}

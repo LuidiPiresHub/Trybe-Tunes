@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import Header from '../components/Header';
 import getMusics from '../services/musicsAPI';
-import { MusicCard } from '../components/MusicCard';
+import MusicCard from '../components/MusicCard';
 import LoadingScreen from '../components/Loading';
 
 class Album extends React.Component {
@@ -28,13 +28,6 @@ class Album extends React.Component {
   render() {
     const { musicList, loading } = this.state;
     const musics = musicList.filter((music) => music.kind === 'song');
-    const allMusics = musics.map((music, index) => {
-      const { trackName, previewUrl } = music;
-      return (
-        <MusicCard key={ index } trackName={ trackName } previewUrl={ previewUrl } />
-      );
-    });
-
     return (
       <div data-testid="page-album">
         <Header />
@@ -52,7 +45,7 @@ class Album extends React.Component {
               <p data-testid="artist-name">{musicList[0].artistName}</p>
             </div>
 
-            <ul className="musicsConteiner">{allMusics}</ul>
+            <MusicCard musics={ musics } />
 
           </div>
         )}
